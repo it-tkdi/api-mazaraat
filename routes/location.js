@@ -4,9 +4,9 @@ import {authenticateToken} from '../middlewares/jwt.js'
 
 const router = express.Router();
 
-router.get("/", authenticateToken, locationController.getLocations);
-router.get("/:id", authenticateToken, locationController.getLocationById);
-router.post("/", authenticateToken, locationController.addLocation);
-router.put("/", authenticateToken, locationController.updateLocation);
+router.get("/", locationController.getLocations);
+router.get("/:id", locationController.getLocationById);
+router.post("/", locationController.addLocation);
+router.put("/", locationController.updateLocation);
 
 export default router;

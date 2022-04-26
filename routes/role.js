@@ -4,9 +4,9 @@ import {authenticateToken} from '../middlewares/jwt.js'
 
 const router = express.Router();
 
-router.get("/", authenticateToken, roleController.getRoles);
-router.get("/:id", authenticateToken, roleController.getRoleById);
-router.post("/", authenticateToken, roleController.addRole);
-router.put("/", authenticateToken, roleController.updateRole);
+router.get("/", roleController.getRoles);
+router.get("/:id", roleController.getRoleById);
+router.post("/", roleController.addRole);
+router.put("/", roleController.updateRole);
 
 export default router;
